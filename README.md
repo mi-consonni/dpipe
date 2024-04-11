@@ -19,7 +19,34 @@ A more detailed discussion of the features can be found in [`docs/overview.md`](
 Usage at a glance
 -----------------
 
-...
+```cpp
+struct RawPayload {};
+struct CalibPayload {};
+
+struct RawSource {
+    using OutputPayload = RawPayload;
+    std::optional<Frame<OutputPayload>> produce() { /* ... */ }
+};
+
+struct Transform {
+    using InputPayload = RawPayload;
+    using OutputPayload = CalibPayload;
+    std::optional<Frame<OutputPayload>> process(Frame<InputPayload>&& frame) { /* ... */ }
+};
+
+struct Display {
+    using InputPayload = CalibPayload;
+    void consume(Frame<InputPayload>&& frame) { /* ... */ }
+};
+
+int main() {
+    auto pipeline = make_pipe(Display{}, Transform{}, RawSource{});
+    pipeline.start();
+    // ...
+}
+```
+
+See `tests/tests.cpp` for more examples.
 
 Building
 --------
