@@ -1,6 +1,11 @@
 #ifndef DPIPE_DPIPE_H_
 #define DPIPE_DPIPE_H_
 
+#include <dpipe/builders.h>
+#include <dpipe/elements.h>
+#include <dpipe/frame.h>
+#include <dpipe/mut-frame.h>
+
 namespace dpipe {
 
 /**
