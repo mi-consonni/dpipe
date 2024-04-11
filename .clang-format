@@ -1,0 +1,17 @@
+Language: Cpp
+BasedOnStyle: LLVM
+
+AccessModifierOffset: -4
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeBinaryOperators: NonAssignment
+BreakConstructorInitializers: BeforeComma
+ColumnLimit: 100
+ConstructorInitializerIndentWidth: 8
+IndentCaseLabels: true
+IndentWidth: 4
+PackConstructorInitializers: Never
+PenaltyBreakAssignment: 100
+PointerAlignment: Left
+SortIncludes: CaseInsensitive
