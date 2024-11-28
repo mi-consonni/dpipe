@@ -13,7 +13,7 @@ namespace dpipe {
  *        following semantic versioning conventions.
  */
 inline constexpr const char* version() {
-    return "0.0.0";
+    return "0.1.0";
 }
 
 } // namespace dpipe
